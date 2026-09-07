@@ -31,3 +31,9 @@ COPY target/MavenWebProject25BD5A6615-0.0.1-SNAPSHOT.war /usr/local/tomcat/webap
 FROM nginx:latest
 
 COPY index.html /usr/share/nginx/html/index.html
+
+
+ RUN CONTAINER
+docker run -d -p 8080:8080 --name maven-web-container 25bd5a6615-web
+
+docker run -d -p 8080:80 --name nginx-container 25bd5a6615-nginx
